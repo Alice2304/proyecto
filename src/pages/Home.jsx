@@ -6,6 +6,7 @@ import Buscar from "components/buscar/Buscar";
 import Funcionario from "components/funcionario/Funcionario";
 import Encuesta from "components/encuesta/Encuesta";
 import Aprobado from "components/aprobado/Aprobado";
+import axios from "axios"
 
 //peticiones API
 import { creates } from "lib/peticiones/encuestaPreguntas";
@@ -30,6 +31,19 @@ import { filterComponents } from "helpers/filterComponents";
     id_estatus: 0,
   })
 
+  async function login () {
+    const x = await new Promise((resolve, reject) => {
+      
+      axios.get(`http://172.16.0.47:5000/api/recibos`)
+      .then(
+        rss=>console.log(rss)
+      ).catch(function(error) {
+        console.log('There has been a problem with your fetch operation: ' + error.message);
+         // ADD THIS THROW error
+          throw error;
+        });
+})}
+
   //Obtenemos el numero en el que se encuentra el Step
   const StepNumero=(numero)=>{
     setNumeroStep(numero)
@@ -47,6 +61,7 @@ import { filterComponents } from "helpers/filterComponents";
 
   useEffect(() => {
     creates(setPreguntasEncuesta)
+    login()
   }, [])
   
   return (
