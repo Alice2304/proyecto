@@ -1,0 +1,111 @@
+.is-overlay {
+  @extend %overlay;
+}
+
+.is-relative {
+  position: relative !important;
+
+  @for $var from 0 to 100 {
+    &.right-#{$var}{
+      right: #{$var}rem;
+    }
+
+    &.left-#{$var}{
+      left: #{$var}rem;
+    }
+
+    &.top-#{$var}{
+      top: #{$var}rem;
+    }
+
+    &.bottom-#{$var}{
+      bottom: #{$var}rem;
+    }
+  }
+}
+
+.is-absolute {
+  position: absolute !important;
+
+  @for $var from 0 to 100 {
+    &.right-#{$var}{
+      right: #{$var}rem;
+    }
+
+    &.left-#{$var}{
+      left: #{$var}rem;
+    }
+
+    &.top-#{$var}{
+      top: #{$var}rem;
+    }
+
+    &.bottom-#{$var}{
+      bottom: #{$var}rem;
+    }
+  }
+}
+
+.is-fixed {
+  position: fixed !important;
+  @for $var from 0 to 101 {
+    &.right-#{$var}{
+      right: #{$var}rem;
+    }
+
+    &.left-#{$var}{
+      left: #{$var}rem;
+    }
+
+    &.top-#{$var}{
+      top: #{$var}rem;
+    }
+
+    &.bottom-#{$var}{
+      bottom: #{$var}rem;
+    }
+
+    
+  }
+
+  @for $var from 0 to 1001 {
+    &.z-index-#{$var}{
+      z-index: #{$var};
+    }
+  }
+}
+
+.is-sticky {
+  position: sticky !important;
+  @for $var from 0 to 101 {
+    &.right-#{$var}{
+      right: #{$var}rem;
+    }
+
+    &.left-#{$var}{
+      left: #{$var}rem;
+    }
+
+    &.top-#{$var}{
+      top: #{$var}rem;
+    }
+
+    &.bottom-#{$var}{
+      bottom: #{$var}rem;
+    }
+
+    
+  }
+
+  @for $var from 0 to 1001 {
+    &.z-index-#{$var}{
+      z-index: #{$var};
+    }
+  }
+}
+
+@for $var from 0 to 1001 {
+  .z-index-#{$var}{
+    z-index: #{$var};
+  }
+}

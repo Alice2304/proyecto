@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1215.13" height="1214.134" viewBox="0 0 1215.13 1214.134">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="1214.134" height="1215.13" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_3442" data-name="Grupo 3442" transform="translate(-6742.502 -6046.497)">
+    <g id="Cuadrícula_de_repetición_6" data-name="Cuadrícula de repetición 6" transform="translate(6742.502 7260.631) rotate(-90)" clip-path="url(#clip-path)">
+      <g id="Grupo_3440" data-name="Grupo 3440" transform="translate(-4702 -6045.999)">
+        <path id="Trazado_149" data-name="Trazado 149" d="M139.856,0H1314.144C1391.384,0,1454,49.7,1454,111v932c0,61.3-62.616,111-139.856,111H139.856C62.616,1154,0,1104.3,0,1043V111C0,49.7,62.616,0,139.856,0Z" transform="translate(5518.001 6045.999) rotate(45)" fill="#ffd000"/>
+        <path id="Trazado_150" data-name="Trazado 150" d="M116.1,0h974.828c64.121,0,116.1,39.061,116.1,87.244V819.783c0,48.184-51.98,87.244-116.1,87.244H116.1C51.98,907.028,0,867.967,0,819.783V87.244C0,39.061,51.98,0,116.1,0Z" transform="translate(5518.001 6220.635) rotate(45)" fill="#0055b8"/>
+        <path id="Trazado_151" data-name="Trazado 151" d="M88.3,0H829.736c48.769,0,88.3,26.616,88.3,59.448V558.595c0,32.832-39.535,59.448-88.3,59.448H88.3c-48.769,0-88.3-26.616-88.3-59.448V59.448C0,26.616,39.535,0,88.3,0Z" transform="translate(5518.001 6424.979) rotate(45)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

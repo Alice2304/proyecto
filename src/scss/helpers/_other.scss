@@ -1,0 +1,151 @@
+.is-radiusless {
+  border-radius: 0 !important;
+}
+
+.is-radius {
+  border-radius: $radius-large !important;
+}
+.is-radius-full {
+  border-radius: 3rem !important;
+}
+.is-radius-small {
+  border-radius: $radius-small !important;
+}
+
+.not-radius-right{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.x-overflow-hidden{
+  overflow-x: hidden;
+}
+
+.is-height-full{
+  height: 106%;
+}
+
+.is-height-100{
+  height: 100%;
+}
+
+.is-width-100{
+  width: 100%;
+}
+
+.is-22-min{
+  width: 35%;
+}
+
+.is-shadowless {
+  box-shadow: none !important;
+}
+
+.is-unselectable {
+  @extend %unselectable;
+}
+
+.is-pointer{
+  cursor: pointer;
+}
+
+@for $var from 0 to 101 {
+  .vh#{$var}{
+    height: #{$var}vh;
+  }
+}
+@for $var from 0 to 101 {
+  .vh-maxx#{$var}{
+    max-height:#{$var}vh;
+  }
+}
+@for $var from 0 to 101 {
+  .vw#{$var}{
+    width: #{$var}vw;
+  }
+  
+}
+@for $var from 0 to 101 {
+  .vw-maxx#{$var}{
+    max-width: #{$var}vw;
+  } 
+}
+
+
+@for $var from 0 to 101 {
+  .line-height#{$var}{
+    line-height: #{$var}vh;
+  }
+}
+
+.has-background-square{
+  position: fixed;
+  width: 30%;
+
+  &.top{
+    top:0;
+  }
+  &.bottom{
+    bottom: 0;
+  }
+  &.left{
+    left:0;
+  }
+  &.right{
+   right:0;
+  }
+}
+
+
+
+.scrool{
+
+  &.normal{
+    &::-webkit-scrollbar{
+      width: 8px;     /* Tamaño del scroll en vertical */
+      height: 8px;    /* Tamaño del scroll en horizontal */
+      
+    }
+  }
+
+  &.small{
+    &::-webkit-scrollbar{
+      width: 5px;     /* Tamaño del scroll en vertical */
+      height: 5px;    /* Tamaño del scroll en horizontal */
+      
+    }  
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 8px;
+  }
+
+  &.boxes::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-top-left-radius: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  &::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 8px;
+  }
+
+  &.boxes::-webkit-scrollbar-track{
+    border-top-left-radius: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+}

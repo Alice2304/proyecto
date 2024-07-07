@@ -1,0 +1,89 @@
+$box-color: $text !default;
+$box-background-color: $scheme-main !default;
+$box-radius: $radius-large !default;
+
+$box-padding: 1.25rem !default;
+
+$box-link-hover-shadow: 0 0.5em 1em -0.125em rgba($scheme-invert, 0.1), 0 0 0 1px $link !default;
+$box-link-active-shadow: inset 0 1px 2px rgba($scheme-invert, 0.2), 0 0 0 1px $link !default;
+
+.box {
+  @extend %block;
+
+  background-color: $box-background-color;
+  border-radius: $box-radius;
+  box-shadow: $shadow-general;
+  color: $box-color;
+  display: block;
+  padding: $box-padding;
+  
+  &>.text-anchor{
+    font-weight: 700;
+  }
+
+  &.height{
+    height: 100%;
+  }
+
+  &.dash-one{
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: right -40px top -10px;
+  }
+
+  
+  &.is-primary{
+    background-color:$primary;
+
+    &.bold {
+      @include bold-degrade($primary);
+      color: white;
+
+    }
+
+  }
+
+  &.is-secundary{
+    background-color:$orange;
+
+    &.bold {
+      @include bold-degrade($orange);
+      color: white;
+
+    }
+
+  }
+
+  &.background-water{
+    background-image: url('./Rectangle72.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  &.height-is-total{
+    height: 100%;
+  }
+  
+  &.height-is-total{
+    height: 100%;
+  }
+
+  &.scrol{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 8px;
+  }
+}
+
+a.box {
+  &:hover,
+  &:focus {
+    box-shadow: $box-link-hover-shadow;
+  }
+
+  &:active {
+    box-shadow: $box-link-active-shadow;
+  }
+}

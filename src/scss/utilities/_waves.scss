@@ -1,0 +1,73 @@
+
+  .wave3 {
+    height: 427px;
+    width: 2402px;
+    background-position: 0 0;
+  }
+  .wave2 {
+    height: 427px;
+    width: 2402px;
+    background-position: 0 -427px;
+  }
+  .wave1 {
+    height: 427px;
+    width: 2402px;
+    background-position: 0 -854px;
+  }
+  @keyframes wave {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    50% {
+      transform: translate(-80px, 30px);
+    }
+    100% {
+      transform: translate(160px, -60px);
+    }
+  }
+  @-webkit-keyframes wave {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    50% {
+      transform: translate(-80px, 30px);
+    }
+    100% {
+      transform: translate(160px, -60px);
+    }
+  }
+  @-moz-keyframes wave {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    50% {
+      transform: translate(-80px, 30px);
+    }
+    100% {
+      transform: translate(160px, -60px);
+    }
+  }
+  .waves {
+    position: fixed;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    overflow: hidden;
+  }
+  .waves > div {
+    position: absolute;
+    left: -180px;
+    bottom: -60px;
+  }
+  .waves .wave1,
+  .waves .wave2,
+  .waves .wave3 {
+    animation: wave 5s ease-in-out alternate infinite;
+  }
+  .waves .wave2 {
+    animation-delay: 0.6s;
+  }
+  .waves .wave3 {
+    animation-delay: 1.2s;
+  }

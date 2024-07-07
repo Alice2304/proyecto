@@ -1,0 +1,113 @@
+$menu-item-color: $text !default;
+$menu-item-radius: $radius!default;
+$menu-item-hover-color: $text-strong !default;
+$menu-item-hover-background-color: $white-bis !default;
+$menu-item-active-color: $link-invert !default;
+$menu-item-active-background-color: $link !default;
+
+$menu-list-border-left: 1px solid $border !default;
+$menu-list-line-height: 1.25 !default;
+$menu-list-link-padding: 11px 16px !default;
+$menu-nested-list-margin: 0.75em !default;
+$menu-nested-list-padding-left: 0.75em !default;
+
+$menu-label-color: $text-light !default;
+$menu-label-font-size: 0.875rem !default;
+$menu-label-letter-spacing: 0.1em !default;
+$menu-label-spacing: 1em !default;
+
+.menu {
+  font-size: $size-normal;
+
+  &.sidebar{
+    overflow: hidden;
+    box-shadow: $shadow-general;
+    background: white;
+    height: 85vh;
+    max-height: 85vh;
+    padding: 0.5rem 0;
+  }
+
+  // Sizes
+  &.is-small {
+    font-size: $size-small;
+  }
+
+  &.is-medium {
+    font-size: $size-medium;
+  }
+
+  &.is-large {
+    font-size: $size-large;
+  }
+}
+
+.menu-box{
+  max-height: 85vh;
+  height: 85vh;
+  padding: 0.5rem 1.25rem;
+  overflow: auto;
+}
+
+.menu-list {
+  line-height: $menu-list-line-height;
+  margin-bottom: 2rem;
+  list-style: none;
+  padding-left: 0;
+
+  li{
+    margin: 0 0 8px;
+  }
+  a {
+    border-radius: $menu-item-radius;
+    color: $menu-item-color;
+    display: block;
+    padding: $menu-list-link-padding;
+
+    &>.icon{
+      color:rgba(0, 0, 0, 0.54);
+    }
+
+    &:hover {
+      background-color: $menu-item-hover-background-color;
+      color: $menu-item-hover-color;
+    }
+
+    // Modifiers
+    &.active {
+      background-color: $menu-item-active-background-color;
+      color: $menu-item-active-color;
+
+      &>.icon{
+        color:white;
+      }
+    }
+  }
+
+  li {
+    ul {
+      @include ltr-property("border", $menu-list-border-left, false);
+
+      margin: $menu-nested-list-margin;
+
+      @include ltr-property("padding", $menu-nested-list-padding-left, false);
+    }
+  }
+}
+
+.menu-label {
+  margin: 0 0 16px;
+  color: $menu-label-color;
+  font-size: $menu-label-font-size;
+  font-weight: 500;
+  opacity: 0.4;
+  text-transform: uppercase;
+
+  &:not(:first-child) {
+    margin-top: $menu-label-spacing;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $menu-label-spacing;
+  }
+}

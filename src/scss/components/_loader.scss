@@ -1,0 +1,76 @@
+
+
+
+.loader {
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  margin: auto;
+}
+.loader::before, .loader::after {
+  content: "";
+  position: absolute;
+}
+
+
+
+.loader-3::before, .loader-3::after {
+  border-radius: 50%;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.loader-3::before {
+  width: 2rem;
+  height: 2rem;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  border-bottom-right-radius: 0;
+  box-shadow: 0 0 0 2px #fff;
+  background: radial-gradient(transparent 0, transparent 3px, #fff6 3px);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-animation-name: mapPin;
+          animation-name: mapPin;
+}
+.loader-3::after {
+  width: 1.15rem;
+  height: 0.7rem;
+  opacity: 0.8;
+  top: 100%;
+  left: calc(50% - 2px);
+  background: #ffffff7a;
+  -webkit-animation-name: mapPinShadow;
+          animation-name: mapPinShadow;
+}
+
+@-webkit-keyframes mapPin {
+  50% {
+    -webkit-transform: rotate(45deg) translate(-50%, -50%);
+            transform: rotate(45deg) translate(-50%, -50%);
+  }
+}
+
+@keyframes mapPin {
+  50% {
+    -webkit-transform: rotate(45deg) translate(-50%, -50%);
+            transform: rotate(45deg) translate(-50%, -50%);
+  }
+}
+@-webkit-keyframes mapPinShadow {
+  50% {
+    -webkit-transform: scaleX(3);
+            transform: scaleX(3);
+    opacity: 0.2;
+  }
+}
+@keyframes mapPinShadow {
+  50% {
+    -webkit-transform: scaleX(3);
+            transform: scaleX(3);
+    opacity: 0.2;
+  }
+}
